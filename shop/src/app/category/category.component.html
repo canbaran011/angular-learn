@@ -1,0 +1,7 @@
+<div class="container">
+    <h3 *ngIf="title">{{title}}</h3>
+    <a href="" class="list-group-item active">All Items</a>
+    <div class="list-group" *ngFor="let category of categories" >
+        <a class="list-group-item" href=""> {{category.name}} </a>
+    </div>
+</div>

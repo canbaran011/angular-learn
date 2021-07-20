@@ -1,0 +1,22 @@
+<h3 *ngIf="products" >{{title}}</h3>
+
+<div class="form-group">
+  <input 
+  class="form-control" 
+  id="productName" 
+  placeholder="Enter Search Keywords"
+  [(ngModel)]="filterText"
+  />
+  <small class="form-text text-muted" >never share your info</small>
+</div>
+
+<div class="row">
+    <div *ngFor="let product of products | productFilter:filterText" class="card" style="width: 18rem;">
+        <img [src]="product.imageUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> {{product.name | uppercase}} </h5>
+          <p class="card-text"> {{product.description}} - {{product.price | currency:'TRY':true:"1.2-2"}} </p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+</div>
