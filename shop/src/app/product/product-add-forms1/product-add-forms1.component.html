@@ -1,0 +1,33 @@
+<h3>Add New Product</h3>
+<form #productAddForm="ngForm" (ngSubmit)="add(productAddForm)">
+    <div class="form-group mb-2">
+        <input type="text" class="form-control" placeholder="Product Name" #name="ngModel" [(ngModel)]="model.name"
+            name="name" id="name" required>
+        <div *ngIf="name.invalid && name.dirty" class="alert alert-danger">Product Name Required</div>
+    </div>
+    <div class="form-group mb-2">
+        <input type="text" class="form-control" placeholder="Description" #description="ngModel" [(ngModel)]="model.description"
+            name="description" id="description" required>
+        <div *ngIf="description.invalid && description.dirty" class="alert alert-danger">Description Required</div>
+    </div>
+    <div class="form-group mb-2">
+        <input type="text" class="form-control" placeholder="Product Image" #imageUrl="ngModel" [(ngModel)]="model.imageUrl"
+            name="imageUrl" id="imageUrl" required>
+        <div *ngIf="imageUrl.invalid && imageUrl.dirty" class="alert alert-danger">imageUrl Required</div>
+    </div>
+    <div class="form-group mb-2">
+        <input type="text" class="form-control" placeholder="Product Price" #price="ngModel" [(ngModel)]="model.price"
+            name="price" id="price" required>
+        <div *ngIf="price.invalid && price.dirty" class="alert alert-danger">price Required</div>
+    </div>
+    <div class="form-group">
+        <select placeholder="select" class="form-select" #categoryId="ngModel" [(ngModel)]="model.categoryId" required id="categoryId" name="categoryId">
+            <option selected disabled value="0">Open this select menu</option>
+            <option *ngFor="let category of categories" [value]="category.id">
+                {{category.name}}                
+            </option>
+        </select>
+        <div *ngIf="categoryId.invalid && categoryId.touched" class="alert alert-danger">Category Required</div>
+    </div>
+    <button type="submit" class="btn btn-primary" [disabled]="productAddForm.invalid" >Add Product</button>
+</form>
