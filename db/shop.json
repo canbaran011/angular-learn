@@ -23,6 +23,14 @@
       "price": "5300",
       "categoryId": "2",
       "id": 3
+    },
+    {
+      "name": "Buzdolabi",
+      "description": "Beko buzdolabi",
+      "imageUrl": "https://cdn.akakce.com/beko/beko-684630-ei-a-kombi-no-frost-z.jpg",
+      "price": "4500",
+      "categoryId": "2",
+      "id": 4
     }
   ],
   "categories": [
