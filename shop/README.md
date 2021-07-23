@@ -1,4 +1,6 @@
 # Shop
+! important for rrestfull requests you should have npm package json-server which is very useful 
+run with cmd or terminal in db folder with << json-server --watch shop.json >>
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.2.
 
