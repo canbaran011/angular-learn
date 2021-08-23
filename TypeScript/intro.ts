@@ -21,7 +21,7 @@ let sayilarDizi:number[] = [1,2,3]
 let sayilar2 : Array<number> = [1,2,3,4,5]
 
 let diziTuple :[number,string] = [2,"Adana"]
-diziTuple[0]
+console.log(diziTuple[0]);
 
 enum Renk {kirmizi= 1 , siyah , mavi}
 let renk : Renk = Renk.kirmizi
